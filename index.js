@@ -33,11 +33,30 @@ function createManager() {
             message: "What is the Manager's Office Number?"
         }
     ])
-    .then(ansers => {
+    .then(answers => {
         let { managerName, managerId, managerEmail, managerOfficeNumber } = answers;
         const manager = new Manager(managerName, managerId, managerEmail, managerOfficeNumber);
         team.push(manager);
         addTeam();
+    })
+}
+
+function addTeam() {
+    inquirer.prompt({
+        type: "list",
+        name: "addToTeam",
+        message: "what kind of employee shall we add to the team?",
+        choices: ["Engineer", "Intern", "None"]
+    })
+    .then(answers => {
+        let { addToTeam } = answers;
+        if (addToTeam === "Engineer") {
+            createEngineer();
+        } else if ( addToTeam === "Intern" ) {
+            createIntern();
+        } else {
+            createPage();
+        }
     })
 }
 
@@ -103,33 +122,15 @@ function createIntern() {
     })
 }
 
-function generatePage() {
-    fs.writeFile("./dist/index.html", htmlTemplate(team), err => {
-        if (err) {
-            return console.log(err);
-        } else {
-            console.log("Your team page has been created, html page is located in the dist folder")
-        }
+function createPage() {
+    const pageHTML = generatePage(team);
+
+    fs.writeFile("./dist/index.html", pageHTML, err=> {
+        if(err) throw new Error(err)
+        console.log("Your team page has been created in the dist folder")
     })
 }
 
-function addTeam() {
-    inquirer.prompt({
-        type: "list",
-        name: "addToTeam",
-        message: "what kind of employee shall we add to the team?",
-        choices: ["Engineer", "Intern", "None"]
-    })
-    .then(answer => {
-        let { addToTeam } = answers;
-        if (addToTeam === "Engineer") {
-            createEngineer();
-        } else if ( addToTeam === "Intern" ) {
-            createIntern();
-        } else {
-            generatePage();
-        }
-    })
-}
+
 
 createManager();
