@@ -4,9 +4,9 @@ function createTeam(teamData) {
     console.log(teamData)
     function createManager(manager) {
         return `
-        <div>
-                <div class="col-4 m-3 p-3 border border-dark card rounded">
-                    <div bg-primary>
+            <div>
+                <div class="m-3 border border-dark card rounded">
+                    <div class="bg-warning">
                         <h2 class="text-white">MANAGER</h2>
                     </div>
 
@@ -24,8 +24,8 @@ function createTeam(teamData) {
     function createEngineer(engineer) {
         return `
             <div>
-                <div class="col-4 m-3 p-3 border border-dark card rounded">
-                    <div bg-primary>
+                <div class="m-3 border border-dark card rounded">
+                    <div class="bg-danger">
                         <h2 class="text-white">ENGINEER</h2>
                     </div>
 
@@ -43,8 +43,8 @@ function createTeam(teamData) {
     function createIntern(intern) {
         return `
             <div>
-                <div class="col-4 m-3 p-3 border border-dark card rounded">
-                    <div bg-primary>
+                <div class="m-3 border border-dark card rounded">
+                    <div class="bg-success">
                         <h2 class="text-white">INTERN</h2>
                     </div>
 
