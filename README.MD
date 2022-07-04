@@ -45,10 +45,17 @@
     Application to generate a Team page to have quick access to employee resources and contacts
 
 # Installation
+    Ensure you are in the correct directory in your terminal. Run a 'npm install' to download all the assets. Run 'node index.js' to start application.
 
 # Demo
+    https://drive.google.com/file/d/1y6Q0TD8bhmGIF0I8jF5fmLBVZOkuOPTr/view?usp=sharing
 
 # Technology
+    Inquirer
+    JavaScript
+    HTML
+    CSS
+    BootStrap
 
 # Questions
 If you have any questions or concerns, feel free to contact me 

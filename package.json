@@ -1,5 +1,27 @@
 {
+  "name": "challenge-8-team-generator",
+  "version": "1.0.0",
+  "description": "Application to generate an HTML page with the team's contact",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "dependencies": {
+    "jest": "27.5.1",
     "inquirer": "^8.2.4"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alu1868/Challenge-8-Team-Generator.git"
+  },
+  "author": "Alex Lu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alu1868/Challenge-8-Team-Generator/issues"
+  },
+  "homepage": "https://github.com/alu1868/Challenge-8-Team-Generator#readme"
 }
