@@ -126,8 +126,11 @@ function createPage() {
     const pageHTML = generatePage(team);
 
     fs.writeFile("./dist/index.html", pageHTML, err=> {
-        if(err) throw new Error(err)
-        console.log("Your team page has been created in the dist folder")
+        if(err) {
+            return console.error(err)
+        } else {
+            console.log("Your team page has been created in the dist folder")
+        }
     })
 }
 
